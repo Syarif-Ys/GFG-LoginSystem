@@ -7,9 +7,20 @@
 <body>
       <h3>Signin</h3>
 
-      <button type="submit"><a href="/signup">SignUp</a></button>
-      <button type="submit"><a href="/signin">SignIn</a></button>
-      <button type="submit"><a href="/signout">SignOut</a></button>
+      <form action="/signin" method="post">
+          {% csrf_token %}
+          <label for="">Username</label>
+          <input type="text" id="username" name="username" placeholder="Enter Your Username" required>
+          <br>
+          <label for="">Password</label>
+          <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" required>
+          <br>
+            <button type="submit">Sign In</button>
+      </form>
+
+      <button type="submit"><a href="/signup">Ke Halaman SignUp</a></button>
+      <button type="submit"><a href="/signin">Ke Halaman SignIn</a></button>
+      <button type="submit"><a href="/signout">Ke Halaman SignOut</a></button>
 
 </body>
 </html>
